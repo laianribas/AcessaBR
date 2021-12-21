@@ -1,0 +1,66 @@
+@import '../../styles/responsive';
+
+.footer {
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    p {
+      width: 95%;
+    }
+  }
+
+  &__section {
+    padding: 4rem 0;
+
+    a {
+      color: #0070c1;
+      &:hover {
+        color: var(--blue);
+      }
+      text-decoration: none;
+    }
+
+    &--first {
+      background-color: var(--footerGreen);
+      color: var(--black);
+      font-size: 1.5rem;
+    }
+
+    &--second {
+      background-color: var(--green);
+      color: var(--white);
+      font-size: 1.8rem;
+      small {
+        font-weight: 400;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .button {
+    background-color: #dae8fc;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    align-self: flex-end;
+    &:hover {
+      background-color: #dae8fc;
+    }
+  }
+
+  @media (width: $mobileLarge) {
+    &__container {
+      flex-wrap: nowrap;
+
+      p {
+        strong {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
